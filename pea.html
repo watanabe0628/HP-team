@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact</title>
+  <title>女子力</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="nomalize.css">
   <link rel="stylesheet" href="pea.css">
 </head>
@@ -15,19 +16,19 @@
         <a href="pea.html">お問合せフォーム</a>
       </h2>
     </header>
+    <img src="./img/download.jpg" class="image_erea">
     <div class="content">
-      
       <div class="mailform">
+        <div class="wrapper clearfix">
+        <aside class="side_menu">
         <form action="">
           <label for="">
-           <div class="mailformtitle">
-             名前:
-           </div>
-           <div class="mailformbody">
-             <input type="text">
-             <br>
-             
-           </div>
+          <div class="mailformtitle">
+            名前:
+          </div>
+          <div class="mailformbody">
+            <input type="text">
+          </div>
           </label>
           <label for="">
           <div class="mailformtitle">
@@ -46,21 +47,60 @@
               <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
               <br>
-
           </label>
           <div class="mailsend">
             <button type="button">
-             メッセージを送信
+            メッセージ送信
             </button>
-
           </div>
         </form>
-
+      </aside>
+      <article class="leg">
+        <div class="lady">
+        <h1>推しメン</h1>
+        <input id="btn" type="button" value="ボタン" onclick="getImage()">
+  <img id="im1" alt="ここに表示されます。">
+      　<script>
+        function getImage(){
+  //画像ファイル名を配列で保持
+  var arr = ['./img/893.jpg', './img/402038_01.jpg', './img/white.jpg','./img/aka.png'];
+  //ランダムで画像ファイルを取得して表示する
+  var obj = document.getElementById("im1");
+  var a = Math.floor(Math.random() * arr.length);
+  obj.src = arr[a];
+}
+        </script>
+        </div>
+      </article>
+      </div>
       </div>
     </div>
     <footer class="footer">
       <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
     </footer>
   </div>
+  <script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+        window.confirm('この子でいいですか！');
+        var result = window.confirm('この子でいいですか！');
+        if( result ) {
+        console.log('OKがクリックされました');
+    }
+    else {
+        console.log('キャンセルがクリックされました');
+    }
+  });
+    </script>
+
+    <script>
+    var send = document.querySelector('.send');
+    send.addEventListener('click', function() {
+        window.confirm('この子に送信しますか！');
+        console.log('この子に送信しますか！');
+      });
+
+
+    </script>
 </body>
 </html>
